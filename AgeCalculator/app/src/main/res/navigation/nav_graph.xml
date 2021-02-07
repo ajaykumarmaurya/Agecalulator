@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userProfileFragment">
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.alivecor.assignment.view.fragments.UserProfileFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_user_profile">
+
+        <action
+            android:id="@+id/action_UserProfileFragment_to_UserDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.alivecor.assignment.view.fragments.UserDetailsFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_user_profile_details">
+
+        <action
+            android:id="@+id/action_UserDetailsFragment_to_UserProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+</navigation>
